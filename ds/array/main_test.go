@@ -286,6 +286,21 @@ func BenchmarkFindLastElementInArrayIn1000(b *testing.B) {
 	}
 }
 
+func BenchmarkFindLastElementInArrayIn10000(b *testing.B) {
+	numSeries := [10000]int{}
+	for i := 0; i < 10000; i++ {
+		numSeries[i] = i
+	}
+
+	for i := 0; i < b.N; i++ {
+		for _, num := range numSeries {
+			if num == 9999 {
+				break
+			}
+		}
+	}
+}
+
 func BenchmarkMatrixAccessAll(b *testing.B) {
 	matrix := [2][2]int{{11, 12}, {21, 22}}
 	for i := 0; i < b.N; i++ {

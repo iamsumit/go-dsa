@@ -70,7 +70,7 @@ func BenchmarkSize(b *testing.B) {
 	}
 }
 
-func BenchmarkPriorityQueue(b *testing.B) {
+func BenchmarkPriorityQueueEnqueue(b *testing.B) {
 	_pq := pq.PriorityQueue{}
 
 	for i := 0; i < b.N; i++ {
