@@ -6,6 +6,7 @@ import (
 	"github.com/iamsumit/go-dsa/ds/tree/bst"
 	"github.com/iamsumit/go-dsa/ds/tree/bt"
 	"github.com/iamsumit/go-dsa/ds/tree/nry"
+	"github.com/iamsumit/go-dsa/ds/tree/nrysib"
 	"github.com/iamsumit/go-dsa/ds/tree/tt"
 )
 
@@ -192,10 +193,10 @@ func main() {
 
 	fmt.Println("Implmenting N-ary Tree...")
 
-	nryVar := nry.NewNaryTreeNode(1)
-	nryVar.AddChild(nry.NewNaryTreeNode(0))
-	nryVar.AddChild(nry.NewNaryTreeNode(1))
-	nryVar.AddChild(nry.NewNaryTreeNode(2))
+	nryVar := nry.NewNaryTreeNode(30)
+	nryVar.AddChild(nry.NewNaryTreeNode(5))
+	nryVar.AddChild(nry.NewNaryTreeNode(11))
+	nryVar.AddChild(nry.NewNaryTreeNode(63))
 
 	fmt.Println("Root Node: ", nryVar.GetData())
 	fmt.Println("Child 1: ", nryVar.GetChildren()[0].GetData())
@@ -204,27 +205,33 @@ func main() {
 
 	fmt.Println("------------------------")
 
-	nryVar.GetChildren()[0].AddChild(nry.NewNaryTreeNode(3))
+	nryVar.GetChildren()[0].AddChild(nry.NewNaryTreeNode(1))
 	nryVar.GetChildren()[0].AddChild(nry.NewNaryTreeNode(4))
+	nryVar.GetChildren()[0].AddChild(nry.NewNaryTreeNode(8))
 
 	fmt.Println("Child 1 -> Child 1: ", nryVar.GetChildren()[0].GetChildren()[0].GetData())
 	fmt.Println("Child 1 -> Child 2: ", nryVar.GetChildren()[0].GetChildren()[1].GetData())
+	fmt.Println("Child 1 -> Child 3: ", nryVar.GetChildren()[0].GetChildren()[2].GetData())
 
 	fmt.Println("------------------------")
 
-	nryVar.GetChildren()[1].AddChild(nry.NewNaryTreeNode(5))
 	nryVar.GetChildren()[1].AddChild(nry.NewNaryTreeNode(6))
+	nryVar.GetChildren()[1].AddChild(nry.NewNaryTreeNode(7))
+	nryVar.GetChildren()[1].AddChild(nry.NewNaryTreeNode(15))
 
 	fmt.Println("Child 2 -> Child 1: ", nryVar.GetChildren()[1].GetChildren()[0].GetData())
 	fmt.Println("Child 2 -> Child 2: ", nryVar.GetChildren()[1].GetChildren()[1].GetData())
+	fmt.Println("Child 2 -> Child 3: ", nryVar.GetChildren()[1].GetChildren()[2].GetData())
 
 	fmt.Println("------------------------")
 
-	nryVar.GetChildren()[2].AddChild(nry.NewNaryTreeNode(7))
-	nryVar.GetChildren()[2].AddChild(nry.NewNaryTreeNode(8))
+	nryVar.GetChildren()[2].AddChild(nry.NewNaryTreeNode(31))
+	nryVar.GetChildren()[2].AddChild(nry.NewNaryTreeNode(55))
+	nryVar.GetChildren()[2].AddChild(nry.NewNaryTreeNode(65))
 
 	fmt.Println("Child 3 -> Child 1: ", nryVar.GetChildren()[2].GetChildren()[0].GetData())
 	fmt.Println("Child 3 -> Child 2: ", nryVar.GetChildren()[2].GetChildren()[1].GetData())
+	fmt.Println("Child 3 -> Child 3: ", nryVar.GetChildren()[2].GetChildren()[2].GetData())
 
 	fmt.Println("------------------------")
 
@@ -248,6 +255,68 @@ func main() {
 
 	fmt.Println("PostOrder Traversal: ")
 	nryVar.PostOrderTraversal()
+	fmt.Println()
+
+	fmt.Println("------------------------")
+
+	fmt.Println("Implmenting N-ary Tree with second approach...")
+
+	nryVar2 := nrysib.NewTreeNode(30)
+	nryVar2.AddChild(nrysib.NewTreeNode(5))
+	nryVar2.AddChild(nrysib.NewTreeNode(11))
+	nryVar2.AddChild(nrysib.NewTreeNode(63))
+
+	fmt.Println("Root Node: ", nryVar2.GetData())
+	fmt.Println("Child 1: ", nryVar2.GetChildren().GetData())
+	fmt.Println("Child 2: ", nryVar2.GetChildren().GetSibling().GetData())
+	fmt.Println("Child 3: ", nryVar2.GetChildren().GetSibling().GetSibling().GetData())
+
+	fmt.Println("------------------------")
+
+	nryVar2.GetChildren().AddChild(nrysib.NewTreeNode(1))
+	nryVar2.GetChildren().AddChild(nrysib.NewTreeNode(4))
+	nryVar2.GetChildren().AddChild(nrysib.NewTreeNode(8))
+
+	fmt.Println("Child 1 -> Child 1: ", nryVar2.GetChildren().GetChildren().GetData())
+	fmt.Println("Child 1 -> Child 2: ", nryVar2.GetChildren().GetChildren().GetSibling().GetData())
+	fmt.Println("Child 1 -> Child 3: ", nryVar2.GetChildren().GetChildren().GetSibling().GetSibling().GetData())
+
+	fmt.Println("------------------------")
+
+	nryVar2.GetChildren().GetSibling().AddChild(nrysib.NewTreeNode(6))
+	nryVar2.GetChildren().GetSibling().AddChild(nrysib.NewTreeNode(7))
+	nryVar2.GetChildren().GetSibling().AddChild(nrysib.NewTreeNode(15))
+
+	fmt.Println("Child 2 -> Child 1: ", nryVar2.GetChildren().GetSibling().GetChildren().GetData())
+	fmt.Println("Child 2 -> Child 2: ", nryVar2.GetChildren().GetSibling().GetChildren().GetSibling().GetData())
+	fmt.Println("Child 2 -> Child 3: ", nryVar2.GetChildren().GetSibling().GetChildren().GetSibling().GetSibling().GetData())
+
+	fmt.Println("------------------------")
+
+	nryVar2.GetChildren().GetSibling().GetSibling().AddChild(nrysib.NewTreeNode(31))
+	nryVar2.GetChildren().GetSibling().GetSibling().AddChild(nrysib.NewTreeNode(55))
+	nryVar2.GetChildren().GetSibling().GetSibling().AddChild(nrysib.NewTreeNode(65))
+
+	fmt.Println("Child 3 -> Child 1: ", nryVar2.GetChildren().GetSibling().GetSibling().GetChildren().GetData())
+	fmt.Println("Child 3 -> Child 2: ", nryVar2.GetChildren().GetSibling().GetSibling().GetChildren().GetSibling().GetData())
+	fmt.Println("Child 3 -> Child 3: ", nryVar2.GetChildren().GetSibling().GetSibling().GetChildren().GetSibling().GetSibling().GetData())
+
+	fmt.Println("------------------------")
+
+	fmt.Println("Found 3: ", nryVar2.Search(3))
+	fmt.Println("Found 8: ", nryVar2.Search(8))
+	fmt.Println("Found 9: ", nryVar2.Search(9))
+
+	fmt.Println("------------------------")
+
+	fmt.Println("PreOrder Traversal: ")
+	nryVar2.PreOrderTraversal()
+	fmt.Println()
+
+	fmt.Println("------------------------")
+
+	fmt.Println("PostOrder Traversal: ")
+	nryVar2.PostOrderTraversal()
 	fmt.Println()
 
 	fmt.Println("------------------------")
