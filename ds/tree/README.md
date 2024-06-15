@@ -4,6 +4,7 @@
 BenchmarkBinaryTreeCreationWithTwoLevel-10        		        45.19 ns/op
 BenchmarkBinaryTreeUpdateIn31Node-10              		        20.47 ns/op
 BenchmarkBinaryTreeSearchIn31Node-10              		        85.88 ns/op
+BenchmarkBinaryTreeDeleteIn31Node-10              		        88.59 ns/op
 BenchmarkBinarySearchTreeInsertWithHugeNode-10    		        115248 ns/op
 BenchmarkBinarySearchTreeSearchIn31Node-10        		        19.46 ns/op
 BenchmarkBinarySearchTreeSearchIn10000Node-10     		        40921 ns/op

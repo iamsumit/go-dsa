@@ -30,6 +30,13 @@ func BenchmarkBinaryTreeSearchIn31Node(b *testing.B) {
 	}
 }
 
+func BenchmarkBinaryTreeDeleteIn31Node(b *testing.B) {
+	btVar := getBinaryTree()
+	for i := 0; i < b.N; i++ {
+		btVar.Search(i)
+	}
+}
+
 func BenchmarkBinarySearchTreeInsertWithHugeNode(b *testing.B) {
 	bstVar := bst.NewBinarySearchTreeNode(b.N / 2)
 

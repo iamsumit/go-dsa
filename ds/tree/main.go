@@ -82,6 +82,44 @@ func main() {
 
 	fmt.Println("------------------------")
 
+	fmt.Println("Found 2: ", btVar.Search(2))
+	fmt.Println("Deleting 2: ", btVar.Delete(2, nil))
+	fmt.Println("Found 2: ", btVar.Search(2))
+
+	fmt.Println("------------------------")
+
+	fmt.Println("InOrder Traversal: ")
+	btVar.InOrderTraversal()
+	fmt.Println()
+
+	fmt.Println("------------------------")
+
+	fmt.Println("Found 1: ", btVar.Search(1))
+	fmt.Println("Deleting 1: ", btVar.Delete(1, nil))
+	fmt.Println("Found 1: ", btVar.Search(1))
+
+	fmt.Println("------------------------")
+
+	fmt.Println("Root Node: ", btVar.GetData())
+	fmt.Println("Left Node: ", btVar.GetLeft().GetData())
+	fmt.Println("Right Node: ", btVar.GetRight().GetData())
+
+	fmt.Println("------------------------")
+
+	fmt.Println("Left -> Left Node: ", btVar.GetLeft().GetLeft().GetData())
+	// fmt.Println("Left -> Right Node: ", btVar.GetLeft().GetRight().GetData())
+
+	// fmt.Println("Right -> Left Node: ", btVar.GetRight().GetLeft().GetData())
+	fmt.Println("Right -> Right Node: ", btVar.GetRight().GetRight().GetData())
+
+	fmt.Println("------------------------")
+
+	fmt.Println("InOrder Traversal: ")
+	btVar.InOrderTraversal()
+	fmt.Println()
+
+	fmt.Println("------------------------")
+
 	fmt.Println("Implmeneing Binary Search Tree...")
 
 	bstVar := bst.NewBinarySearchTreeNode(10)
