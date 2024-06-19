@@ -41,4 +41,11 @@ BenchmarkInterpolationSearchMidElement1-10          1.544 ns/op
 BenchmarkInterpolationSearchMidElement2-10          1.517 ns/op
 BenchmarkInterpolationSearchRandomIncrement         1211438625 ns/op
 BenchmarkInterpolationSearchElementNotPresent-10    0.9941 ns/op
+BenchmarkExponentialSearch1000Elements-10           16.20 ns/op
+BenchmarkExponentialSearch10000Elements-10          24.64 ns/op
+BenchmarkExponentialSearch100000Elements-10         32.17 ns/op
+BenchmarkExponentialSearch100000000Elements-10      72.92 ns/op
+BenchmarkExponentialSearchRandomIncrement-10        253229281 ns/op
+BenchmarkExponentialSearchElementNotPresent-10      32.21 ns/op
+BenchmarkExponentialSearchElementNotPresentNegative-10 28.94 ns/o
 ```

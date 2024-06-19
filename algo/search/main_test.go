@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"github.com/iamsumit/go-dsa/algo/search/bs"
+	"github.com/iamsumit/go-dsa/algo/search/es"
 	"github.com/iamsumit/go-dsa/algo/search/is"
 	"github.com/iamsumit/go-dsa/algo/search/js"
 	"github.com/iamsumit/go-dsa/algo/search/ls"
@@ -457,5 +458,85 @@ func BenchmarkInterpolationSearchElementNotPresent(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		is.Search(list, 100000)
+	}
+}
+
+func BenchmarkExponentialSearch1000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 1000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, i)
+	}
+}
+
+func BenchmarkExponentialSearch10000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 10000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, i)
+	}
+}
+
+func BenchmarkExponentialSearch100000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, i)
+	}
+}
+
+func BenchmarkExponentialSearch100000000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, i)
+	}
+}
+
+func BenchmarkExponentialSearchRandomIncrement(b *testing.B) {
+	list := []int{}
+	var i int
+	for len(list) < 100000000 {
+		list = append(list, i)
+		i += rand.Intn(100)
+	}
+
+	midElement := list[len(list)/2]
+	for i := 0; i < b.N; i++ {
+		es.Search(list, midElement)
+	}
+}
+
+func BenchmarkExponentialSearchElementNotPresent(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, 100000)
+	}
+}
+
+func BenchmarkExponentialSearchElementNotPresentNegative(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		es.Search(list, -200)
 	}
 }
