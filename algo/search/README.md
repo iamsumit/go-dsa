@@ -15,11 +15,13 @@ BenchmarkBinarySearch1000Elements-10               	10.43 ns/op
 BenchmarkBinarySearch10000Elements-10              	17.46 ns/op
 BenchmarkBinarySearch100000Elements-10             	20.59 ns/op
 BenchmarkBinarySearch100000000Elements-10          	78.11 ns/op
+BenchmarkBinarySearchRandomIncrement-10             101242900 ns/op
 BenchmarkBinarySearchElementNotPresent-10          	18.19 ns/op
 BenchmarkTernarySearch1000Elements-10              	11.91 ns/op
 BenchmarkTernarySearch10000Elements-10             	19.35 ns/op
 BenchmarkTernarySearch100000Elements-10            	25.05 ns/op
 BenchmarkTernarySearch100000000Elements-10         	84.39 ns/op
+BenchmarkTernarySearchRandomIncrement-10            83655611 ns/op
 BenchmarkTernarySearchElementNotPresent-10         	24.90 ns/op
 BenchmarkJumpSearchFirstElement-10                 	3.292 ns/op
 BenchmarkJumpSearch100thElement-10                 	52.68 ns/op
@@ -35,7 +37,8 @@ BenchmarkInterpolationSearch1000Elements-10         0.9440 ns/op
 BenchmarkInterpolationSearch10000Elements-10        0.9393 ns/op
 BenchmarkInterpolationSearch100000Elements-10       0.9419 ns/op
 BenchmarkInterpolationSearch100000000Elements-10    1.180 ns/op
-BenchmarkInterpolationSearchMidElement1-10           1.544 ns/op
+BenchmarkInterpolationSearchMidElement1-10          1.544 ns/op
 BenchmarkInterpolationSearchMidElement2-10          1.517 ns/op
+BenchmarkInterpolationSearchRandomIncrement         1211438625 ns/op
 BenchmarkInterpolationSearchElementNotPresent-10    0.9941 ns/op
 ```

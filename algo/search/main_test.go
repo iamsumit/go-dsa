@@ -165,6 +165,20 @@ func BenchmarkBinarySearch100000000Elements(b *testing.B) {
 	}
 }
 
+func BenchmarkBinarySearchRandomIncrement(b *testing.B) {
+	list := []int{}
+	var i int
+	for len(list) < 100000000 {
+		list = append(list, i)
+		i += rand.Intn(100)
+	}
+
+	midElement := list[len(list)/2]
+	for i := 0; i < b.N; i++ {
+		bs.Search(list, midElement)
+	}
+}
+
 func BenchmarkBinarySearchElementNotPresent(b *testing.B) {
 	list := []int{}
 	for i := 0; i < 100000; i++ {
@@ -217,6 +231,20 @@ func BenchmarkTernarySearch100000000Elements(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		ts.Search(list, i)
+	}
+}
+
+func BenchmarkTernarySearchRandomIncrement(b *testing.B) {
+	list := []int{}
+	var i int
+	for len(list) < 100000000 {
+		list = append(list, i)
+		i += rand.Intn(100)
+	}
+
+	midElement := list[len(list)/2]
+	for i := 0; i < b.N; i++ {
+		ts.Search(list, midElement)
 	}
 }
 
@@ -404,6 +432,20 @@ func BenchmarkInterpolationSearchMidElement2(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		is.Search(list, 45029380)
+	}
+}
+
+func BenchmarkInterpolationSearchRandomIncrement(b *testing.B) {
+	list := []int{}
+	var i int
+	for len(list) < 100000000 {
+		list = append(list, i)
+		i += rand.Intn(100)
+	}
+
+	midElement := list[len(list)/2]
+	for i := 0; i < b.N; i++ {
+		is.Search(list, midElement)
 	}
 }
 
