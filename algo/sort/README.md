@@ -36,4 +36,11 @@ BenchmarkMergeSort10000Elements-10           973168 ns/op       1192979B
 BenchmarkMergeSort100000Elements-10          11385390 ns/op     14900548B
 BenchmarkMergeSort100000ElementsAsc-10       6905788 ns/op      14881007B
 BenchmarkMergeSort100000ElementsDesc-10      7011948 ns/op      14881837B
+BenchmarkHeapSort10Elements-10               108.5 ns/op
+BenchmarkHeapSort100Elements-10              1580 ns/op
+BenchmarkHeapSort1000Elements-10             33637 ns/op
+BenchmarkHeapSort10000Elements-10            667046 ns/op
+BenchmarkHeapSort100000Elements-10           8953538 ns/op
+BenchmarkHeapSort100000ElementsAsc-10        5871301 ns/op
+BenchmarkHeapSort100000ElementsDesc-10       5919555 ns/op
 ```
