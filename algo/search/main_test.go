@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"github.com/iamsumit/go-dsa/algo/search/bs"
+	"github.com/iamsumit/go-dsa/algo/search/is"
 	"github.com/iamsumit/go-dsa/algo/search/js"
 	"github.com/iamsumit/go-dsa/algo/search/ls"
 	"github.com/iamsumit/go-dsa/algo/search/ts"
@@ -337,5 +338,82 @@ func BenchmarkJumpSearchElementNotPresentNegative(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		js.Search(list, -200)
+	}
+}
+
+func BenchmarkInterpolationSearch1000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 1000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, i)
+	}
+}
+
+func BenchmarkInterpolationSearch10000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 10000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, i)
+	}
+}
+
+func BenchmarkInterpolationSearch100000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, i)
+	}
+}
+
+func BenchmarkInterpolationSearch100000000Elements(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, i)
+	}
+}
+
+func BenchmarkInterpolationSearchMidElement1(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, 4502938)
+	}
+}
+
+func BenchmarkInterpolationSearchMidElement2(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, 45029380)
+	}
+}
+
+func BenchmarkInterpolationSearchElementNotPresent(b *testing.B) {
+	list := []int{}
+	for i := 0; i < 100000; i++ {
+		list = append(list, i)
+	}
+
+	for i := 0; i < b.N; i++ {
+		is.Search(list, 100000)
 	}
 }

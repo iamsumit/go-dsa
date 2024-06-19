@@ -31,4 +31,11 @@ BenchmarkJumpSearch50000thElement-10               	175.0 ns/op
 BenchmarkJumpSearchLastElement-10                  	347.4 ns/op
 BenchmarkJumpSearchElementNotPresent-10            	359.6 ns/op
 BenchmarkJumpSearchElementNotPresentNegative-10    	167.7 ns/op
+BenchmarkInterpolationSearch1000Elements-10         0.9440 ns/op
+BenchmarkInterpolationSearch10000Elements-10        0.9393 ns/op
+BenchmarkInterpolationSearch100000Elements-10       0.9419 ns/op
+BenchmarkInterpolationSearch100000000Elements-10    1.180 ns/op
+BenchmarkInterpolationSearchMidElement1-10           1.544 ns/op
+BenchmarkInterpolationSearchMidElement2-10          1.517 ns/op
+BenchmarkInterpolationSearchElementNotPresent-10    0.9941 ns/op
 ```
