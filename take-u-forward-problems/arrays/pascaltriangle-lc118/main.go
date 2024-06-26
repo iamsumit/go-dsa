@@ -61,5 +61,4 @@ func main() {
 	fmt.Println(generate(3))
 	fmt.Println(generate(5))
 	fmt.Println(generate(8))
-	fmt.Println("Hello World!")
 }
