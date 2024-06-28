@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/
 // Optimal approach 2
 func removeDuplicates(nums []int) int {
 	count := 0

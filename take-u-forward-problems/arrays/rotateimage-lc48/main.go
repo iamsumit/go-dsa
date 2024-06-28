@@ -5,6 +5,7 @@ import (
 	"slices"
 )
 
+// https://takeuforward.org/data-structure/rotate-image-by-90-degree/
 // Optimal approach
 func rotate(matrix [][]int) {
 	for row := range matrix {

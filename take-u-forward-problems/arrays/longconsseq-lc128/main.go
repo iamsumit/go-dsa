@@ -5,6 +5,7 @@ import (
 	"slices"
 )
 
+// https://takeuforward.org/data-structure/longest-consecutive-sequence-in-an-array/
 // With sorting
 func longestConsecutive(nums []int) int {
 	if len(nums) == 0 {

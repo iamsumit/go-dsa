@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/majority-elementsn-3-times-find-the-elements-that-appears-more-than-n-3-times-in-the-array/
 // Moore's Voting Algo
 func majorityElement(nums []int) []int {
 	var count1, count2, elem1, elem2 int

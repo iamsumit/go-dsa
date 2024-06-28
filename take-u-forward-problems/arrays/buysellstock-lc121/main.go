@@ -1,5 +1,6 @@
 package main
 
+// https://takeuforward.org/data-structure/stock-buy-and-sell/
 func maxProfit(prices []int) int {
 	minPrice, maxProfit := prices[0], 0
 

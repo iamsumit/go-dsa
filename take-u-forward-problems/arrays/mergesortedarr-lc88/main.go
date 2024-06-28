@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/merge-two-sorted-arrays-without-extra-space/
 // Optimal approach
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	last := len(nums1) - 1

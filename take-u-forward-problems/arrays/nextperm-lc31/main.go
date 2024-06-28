@@ -5,6 +5,7 @@ import (
 	"slices"
 )
 
+// https://takeuforward.org/data-structure/next_permutation-find-next-lexicographically-greater-permutation/
 func nextPermutation(nums []int) {
 	if len(nums) == 0 || len(nums) == 1 {
 		return

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/check-if-given-linked-list-is-plaindrome/
 // using reverse and match
 func isPalindrome(head *ListNode) bool {
 	slow, fast := head, head

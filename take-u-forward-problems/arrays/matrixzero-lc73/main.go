@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// ## Updated better approach
+// https://takeuforward.org/data-structure/set-matrix-zero/
+// Updated better approach
 func setZeroes(matrix [][]int) {
 	// Used single array instead of two different arrays.
 	rowColMap := [][]int{}

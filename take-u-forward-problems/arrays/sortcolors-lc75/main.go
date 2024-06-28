@@ -1,5 +1,6 @@
 package main
 
+// https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/
 // Optimized solution
 func sortColors(nums []int) {
 	left, mid, right := 0, 0, len(nums)-1

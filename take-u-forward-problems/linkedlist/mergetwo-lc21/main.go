@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/merge-two-sorted-linked-lists/
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	sortedNode := &ListNode{}
 	current := sortedNode

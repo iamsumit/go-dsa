@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/clone-linked-list-with-random-and-next-pointer/
 // Without hashmap
 func copyRandomList(head *Node) *Node {
 	tmp := head

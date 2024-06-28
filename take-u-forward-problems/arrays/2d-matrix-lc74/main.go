@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-// Optimal approach
+// https://takeuforward.org/data-structure/search-in-a-sorted-2d-matrix/
+// Optimal approach - binary search
 func searchMatrix(matrix [][]int, target int) bool {
 	n := len(matrix)
 	m := len(matrix[0])

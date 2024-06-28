@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/reverse-a-linked-list/
 // Reverse using recursion
 func reverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/
 // Optimized solution
 func maxSubArray(nums []int) int {
 	if len(nums) == 0 {

@@ -6,6 +6,7 @@ import (
 	"sort"
 )
 
+// https://takeuforward.org/data-structure/merge-overlapping-sub-intervals/
 // Optimal approach
 func merge(intervals [][]int) [][]int {
 	sort.Slice(intervals, func(i, j int) bool {

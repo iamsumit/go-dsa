@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/count-maximum-consecutive-ones-in-the-array/
 func findMaxConsecutiveOnes(nums []int) int {
 	maxCount, count := 0, 0
 	for i := 0; i < len(nums); i++ {

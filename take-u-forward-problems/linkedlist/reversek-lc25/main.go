@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/reverse-linked-list-in-groups-of-size-k/
 func reverseKGroup(head *ListNode, k int) *ListNode {
 	if k <= 1 {
 		return head

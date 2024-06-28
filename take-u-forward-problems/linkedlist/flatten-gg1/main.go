@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/flattening-a-linked-list/
 // Merge sort approach
 func flattenNode(node *ListNode) *ListNode {
 	if node == nil || node.Next == nil {

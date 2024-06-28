@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/find-the-repeating-and-missing-numbers/
 // with summation formula
 func repeatedNumber(nums []int) []int {
 	n := len(nums)

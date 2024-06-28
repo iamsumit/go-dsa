@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/find-the-duplicate-in-an-array-of-n1-integers/
 func findDuplicate(nums []int) int {
 	prev := nums[0]
 	next := nums[0]

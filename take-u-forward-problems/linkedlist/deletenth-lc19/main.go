@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/remove-n-th-node-from-the-end-of-a-linked-list/
 // with loop
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	if n <= 0 {

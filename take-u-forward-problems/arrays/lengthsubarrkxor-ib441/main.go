@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/count-the-number-of-subarrays-with-given-xor-k/
 // Optimal
 func solve(nums []int, b int) int {
 	count := 0

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/program-to-generate-pascals-triangle/
 // Solution 3 -- from Take U Forward
 func generate(numRows int) [][]int {
 	res := make([][]int, numRows)

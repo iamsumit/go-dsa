@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/count-inversions-in-an-array/
 // With merge sort
 func sort(nums []int) int {
 	return mergeSort(nums, 0, len(nums)-1)

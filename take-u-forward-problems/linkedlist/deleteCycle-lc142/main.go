@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-// Using hashing
+// https://takeuforward.org/data-structure/starting-point-of-loop-in-a-linked-list/
+// Using tortoise and hare
 func detectCycle(head *ListNode) *ListNode {
 	slow, fast := head, head
 

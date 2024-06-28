@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/find-intersection-of-two-linked-lists/
 // Using two pointer approach
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	list1, list2 := headA, headB

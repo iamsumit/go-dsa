@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/implement-powxn-x-raised-to-the-power-n/
 // Better approach using binary exponention
 func myPow(x float64, n int) float64 {
 	ans := 1.0

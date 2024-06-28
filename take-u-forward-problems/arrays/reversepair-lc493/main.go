@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/count-reverse-pairs/
 // Merge sort - optimal
 func reversePairs(nums []int) int {
 	return divideAndConcur(nums, 0, len(nums)-1)

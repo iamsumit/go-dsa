@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// https://takeuforward.org/data-structure/find-middle-element-in-a-linked-list/
 // Tortoise and Hare algorithm
 func middleNode(head *ListNode) *ListNode {
 	tortoise, hare := head, head

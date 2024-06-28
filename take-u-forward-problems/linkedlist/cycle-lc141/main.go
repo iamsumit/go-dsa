@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/detect-a-cycle-in-a-linked-list/
 // Tortoise and Hare
 func hasCycle(head *ListNode) bool {
 	tortoise, hare := head, head

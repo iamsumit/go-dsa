@@ -5,6 +5,7 @@ import (
 )
 
 // with hash map
+// https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character/
 func lengthOfLongestSubstring(s string) int {
 	maxLen, count, lastIndex := 0, 0, -1
 	seen := map[byte]int{}

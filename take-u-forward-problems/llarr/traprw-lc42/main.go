@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/trapping-rainwater/
 // optimal approach 2
 func trap(height []int) int {
 	left, right := 0, len(height)-1

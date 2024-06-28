@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/rotate-a-linked-list/
 // Using counting without array
 func rotateRight(head *ListNode, k int) *ListNode {
 	if k == 0 || head == nil || head.Next == nil {

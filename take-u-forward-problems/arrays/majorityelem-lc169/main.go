@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/
 // Moore's Voting Algo
 func majorityElement(nums []int) int {
 	var count, elem int
